@@ -8,7 +8,7 @@
   /* Color */
   --primary-color: #16213e;
   --secondary-color: #eeeeee;
-  --orage-color: #f16d00;
+  --orange-color: #f16d00;
   --green-color: #367e18;
   --gray-color: #ddd;
 
@@ -46,7 +46,7 @@ h2 {
 }
 
 a {
-  color: var(--orage-color);
+  color: var(--orange-color);
 }
 .btn {
   cursor: pointer;
@@ -56,6 +56,6 @@ a {
   text-transform: uppercase;
 }
 .primary {
-  background: var(--orage-color);
+  background: var(--orange-color);
   color: var(--secondary-color);
 }

@@ -7,7 +7,7 @@ const AboutPage = () => {
       <Col span={22}>
         <Row gutter={16}>
           <Col span={24}>
-            <h1>Thanks to Contact With Me</h1>
+            <h1>About Me</h1>
           </Col>
         </Row>
       </Col>
