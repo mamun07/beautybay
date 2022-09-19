@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import 'antd/dist/antd.css';
+
+:root {
+  /* Font */
+  --primary-font: 'Open Sans', sans-serif;
+
+  /* Color */
+  --primary-color: #16213e;
+  --secondary-color: #eeeeee;
+  --orage-color: #f16d00;
+  --green-color: #367e18;
+  --gray-color: #ddd;
+
+  /* Size */
+  --font10: 10px;
+  --font12: 12px;
+  --font14: 14px;
+  --font16: 16px;
+  --font18: 18px;
+  --font22: 22px;
+  --font26: 26px;
+  --font32: 32px;
+  --font38: 38px;
+  --font46: 46px;
+  --font60: 60px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2 {
+  color: var(--primary-color);
+}
+h1 {
+  font-size: var(--font18);
+}
+h2 {
+  font-size: var(--font16);
+}
+
+a {
+  color: var(--orage-color);
+}
+.btn {
+  cursor: pointer;
+  font-size: var(--font14);
+  line-height: var(--font22);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.primary {
+  background: var(--orage-color);
+  color: var(--secondary-color);
+}
