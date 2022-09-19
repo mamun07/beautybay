@@ -4,18 +4,21 @@ import ContactPage from './pages/contact/ContactPage';
 import Header from './container/Header';
 import Footer from './container/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Layout } from 'antd';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route exaxt path="/" element={<HomePage />} />
-        <Route exaxt path="/about-me" element={<AboutPage />} />
-        <Route exaxt path="/contact-me" element={<ContactPage />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <Layout style={{ background: 'transparent' }}>
+      <Router>
+        <Header />
+        <Routes>
+          <Route exaxt path="/" element={<HomePage />} />
+          <Route exaxt path="/about-me" element={<AboutPage />} />
+          <Route exaxt path="/contact-me" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </Layout>
   );
 }
 
