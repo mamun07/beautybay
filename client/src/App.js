@@ -8,7 +8,7 @@ import Footer from './container/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from 'antd';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import { Flip, ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         draggable
         pauseOnHover
         draggablePercent={60}
+        transition={Flip}
       />
       <Router>
         <Header />
