@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Btn = ({ lebel, link, notifytext, notifytype }) => {
   const CustomNotify = () => {
@@ -18,10 +19,25 @@ const Btn = ({ lebel, link, notifytext, notifytype }) => {
   };
 
   return (
-    <Link onClick={CustomNotify} to={link}>
+    <CusButton onClick={CustomNotify} to={link}>
       {lebel}
-    </Link>
+    </CusButton>
   );
 };
 
 export default Btn;
+
+const CusButton = styled(Link)`
+  padding: 15px 30px;
+  background: var(--orange-color);
+  border: 1px solid var(--orange-color);
+  color: var(--secondary-color);
+  display: inline-block;
+  transition: 0.3s;
+  text-transform: uppercase;
+  &:hover {
+    background: transparent;
+    color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+  }
+`;
