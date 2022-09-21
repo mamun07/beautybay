@@ -1,15 +1,20 @@
 import makeStyled from 'styled-components';
 
-export const NavBar = makeStyled.div`
-    ul{
-        margin: 0;
-        padding: 0;
-        li{
-            float: left;
-            list-style: none;
-            a{
-                color: var(--primary-color)
-            }
-        }
-    }
+export const HeaderNav = makeStyled.div`
+    display: flex;
+`;
+export const HeaderLogo = makeStyled.div`
+    flex: 3;
+    text-align: left;
+`;
+export const HeaderMenu = makeStyled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 6;
+    text-transform: uppercase;
+`;
+export const HeaderInfo = makeStyled.div`
+    flex: 3;
+    text-align: right;
 `;
