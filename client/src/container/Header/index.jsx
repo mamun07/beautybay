@@ -1,10 +1,22 @@
-import React from 'react';
-import { Col, Row } from 'antd';
-import NavList from './List';
-import { HeaderMenu, HeaderLogo, HeaderNav, HeaderInfo } from './style';
+import React, { useState } from 'react';
+import { Col, Drawer, Row } from 'antd';
 import { AiOutlineCode } from 'react-icons/ai';
+import NavList from './List';
+import { MenuOutlined } from '@ant-design/icons';
+
+import { HeaderMenu, HeaderLogo, HeaderNav, MobileMenu } from './style';
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Row gutter={0} justify="center">
       <Col xs={22} xxl={20}>
@@ -14,10 +26,13 @@ const Header = () => {
           </HeaderLogo>
           <HeaderMenu>
             <NavList datalist={menus} />
+            <MobileMenu>
+              <MenuOutlined onClick={showDrawer} />
+              <Drawer placement="right" onClose={onClose} open={open}>
+                <NavList datalist={menus} />
+              </Drawer>
+            </MobileMenu>
           </HeaderMenu>
-          <HeaderInfo>
-            <NavList datalist={info} />
-          </HeaderInfo>
         </HeaderNav>
       </Col>
     </Row>
@@ -42,15 +57,5 @@ const menus = [
   {
     title: 'Post',
     link: '/post',
-  },
-];
-const info = [
-  {
-    title: '+8801917632421',
-    link: 'tel:+8801917632421',
-  },
-  {
-    title: 'mamunben7@gmail.com',
-    link: 'mailto:mamunben7@gmail.com',
   },
 ];
