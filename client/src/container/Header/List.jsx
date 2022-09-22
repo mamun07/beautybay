@@ -19,14 +19,16 @@ const List = ({ datalist }) => {
 export default List;
 
 const NavBar = styled.ul`
-  margin: 0;
-  padding: 0;
+  margin: var(--space0);
+  padding: var(--space0);
   li {
     float: left;
     list-style: none;
     a {
-      padding: 15px 20px;
-      font-size: 14px;
+      padding: var(--space0) var(--space15);
+      font-size: var(--font14);
+      line-height: var(--space25);
+      display: inline-block;
     }
   }
 `;

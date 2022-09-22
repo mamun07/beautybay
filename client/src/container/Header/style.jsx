@@ -2,11 +2,14 @@ import makeStyled from 'styled-components';
 
 export const HeaderNav = makeStyled.div`
     display: flex;
+    padding: var(--space15) 0;
 `;
 export const HeaderLogo = makeStyled.div`
     flex: 3;
     text-align: left;
-    font-size: 20px;
+    svg{
+        font-size: 40px;
+    }
 `;
 export const HeaderMenu = makeStyled.div`
     display: flex;

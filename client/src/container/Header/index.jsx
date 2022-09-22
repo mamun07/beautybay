@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Drawer, Row } from 'antd';
-import { AiOutlineCode } from 'react-icons/ai';
 import NavList from './List';
-import { MenuOutlined } from '@ant-design/icons';
+import { MenuOutlined, AppstoreAddOutlined } from '@ant-design/icons';
 
 import { HeaderMenu, HeaderLogo, HeaderNav, MobileMenu } from './style';
 
@@ -22,7 +21,7 @@ const Header = () => {
       <Col xs={22} xxl={20}>
         <HeaderNav>
           <HeaderLogo>
-            <AiOutlineCode />
+            <AppstoreAddOutlined />
           </HeaderLogo>
           <HeaderMenu>
             <NavList datalist={menus} />
